@@ -1,0 +1,111 @@
+# ===========================
+# 🌱 COMMON
+# ===========================
+.DS_Store
+*.log
+*.pem
+*.tsbuildinfo
+*.iml
+.env*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# IDEs
+.vscode/
+.idea/
+*.iws
+*.ipr
+
+# ===========================
+# 📦 DEPLOYMENT CONFIGS
+# ===========================
+render.yaml
+
+# ===========================
+# ⚙️ BACKEND (Spring Boot)
+# ===========================
+backEnd/.gradle/
+backEnd/build/
+backEnd/ssl/
+backEnd/uploads/
+backEnd/Dockerfile
+backEnd/.dockerignore
+
+# Spring Boot properties 파일 제외
+backEnd/src/main/resources/application.properties
+backEnd/src/main/resources/application-local.properties
+backEnd/src/main/resources/application-prod.properties
+
+# 아래 줄 추가 (예외 처리)
+!backEnd/gradle/wrapper/gradle-wrapper.jar
+!backEnd/**/src/main/**/build/
+!backEnd/**/src/test/**/build/
+!backEnd/src/
+!backEnd/build.gradle
+!backEnd/settings.gradle
+!backEnd/gradle/
+
+# STS
+backEnd/.apt_generated
+backEnd/.classpath
+backEnd/.factorypath
+backEnd/.project
+backEnd/.settings
+backEnd/.springBeans
+backEnd/.sts4-cache
+backEnd/bin/
+!backEnd/**/src/main/**/bin/
+!backEnd/**/src/test/**/bin/
+
+# IntelliJ
+backEnd/out/
+!backEnd/**/src/main/**/out/
+!backEnd/**/src/test/**/out/
+
+# NetBeans
+backEnd/nbproject/private/
+backEnd/nbbuild/
+backEnd/dist/
+backEnd/nbdist/
+backEnd/.nb-gradle/
+
+# ===========================
+# ⚛️ FRONTEND (Next.js)
+# ===========================
+
+# node_modules 및 빌드 관련
+frontEnd/node_modules/
+frontEnd/.next/
+frontEnd/ssl/
+frontEnd/out/
+frontEnd/build/
+
+
+# 환경 변수
+frontEnd/.env
+frontEnd/.env.*
+frontEnd/_env_backup
+frontEnd/server.dev.js
+frontEnd/.vercelignore
+
+# 테스트 커버리지
+frontEnd/coverage/
+
+# 로그 파일
+frontEnd/npm-debug.log*
+frontEnd/yarn-debug.log*
+frontEnd/yarn-error.log*
+
+# Vercel
+frontEnd/.vercel/
+
+# Yarn Berry (사용 시)
+# frontEnd/.pnp
+# frontEnd/.pnp.*
+# frontEnd/.yarn/*
+# !frontEnd/.yarn/patches
+# !frontEnd/.yarn/plugins
+# !frontEnd/.yarn/releases
+# !frontEnd/.yarn/versions
