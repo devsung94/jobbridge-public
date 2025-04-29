@@ -34,7 +34,7 @@ backEnd/Dockerfile
 backEnd/.dockerignore
 
 # Spring Boot properties 파일 제외
-backEnd/src/main/resources/ssl
+backEnd/src/main/resources/ssl/**
 backEnd/src/main/resources/application.properties
 backEnd/src/main/resources/application-local.properties
 backEnd/src/main/resources/application-prod.properties

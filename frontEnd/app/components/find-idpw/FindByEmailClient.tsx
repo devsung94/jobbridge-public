@@ -27,6 +27,12 @@ export default function FindByEmailClient() {
       return;
     }
 
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email.trim())) {
+      setMessage("올바른 이메일 형식을 입력해주세요.");
+      return;
+    }
+
     setIsSending(true);
     setMessage("");
 

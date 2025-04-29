@@ -239,7 +239,9 @@ public class AuthController {
             authService.sendFindIdLink(dto);
             return ResponseUtil.ok("Y", "이메일 전송 성공", null);
         } catch (IllegalStateException e) {
-            return ResponseUtil.conflict(e.getMessage());
+            return ResponseUtil.ok("N", e.getMessage(),null);
+        } catch (Exception e) {
+            return ResponseUtil.serverError(e.getMessage());
         }
     }
 
@@ -255,9 +257,9 @@ public class AuthController {
             authService.sendResetPasswordLink(dto);
             return ResponseUtil.ok("Y", "비밀번호 재설정 링크가 이메일로 전송되었습니다.", null);
         } catch (IllegalStateException e) {
-            return ResponseUtil.conflict(e.getMessage());
+            return ResponseUtil.ok("N", e.getMessage(),null);
         } catch (Exception e) {
-            return ResponseUtil.serverError("서버 오류: " + e.getMessage());
+            return ResponseUtil.serverError(e.getMessage());
         }
     }
 
